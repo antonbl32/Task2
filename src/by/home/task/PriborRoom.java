@@ -10,5 +10,21 @@ public class PriborRoom extends Pribor {
         this.nadoInt=nadoInt;
 
     }
+
+    public int getEstPult() {
+        return estPult;
+    }
+
+    public void setEstPult(int estPult) {
+        this.estPult = estPult;
+    }
+
+    public int getNadoInt() {
+        return nadoInt;
+    }
+
+    public void setNadoInt(int nadoInt) {
+        this.nadoInt = nadoInt;
+    }
 }
 
