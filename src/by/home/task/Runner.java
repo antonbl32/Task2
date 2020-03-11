@@ -21,7 +21,7 @@ public class Runner {
                 System.out.println("Введите целое число");
                 addVibor();
             }
-
+            System.out.println();
             return key;
         }
 
