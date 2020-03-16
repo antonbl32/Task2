@@ -1,5 +1,8 @@
 package by.home.task;
+import java.text.ParseException;
 import java.util.Scanner;
+
+import static by.home.task.Test.selectGroup;
 /*import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,8 +12,22 @@ import java.io.InputStreamReader;
 //Группа 3- кухня
 
 public class Runner {
-        public static void main(String[] args)  {
-            int key=addVibor();
+        public static void main(String[] args) throws ParseException {
+            try {Test.addPribor();}catch (ParseException s) {System.out.println("Не верные данные");}
+            int key=addCheck();
+            switch (key){
+                case 1:
+                    System.out.println(selectGroup(1).toString());
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+
+            }
+
         }
 
 /*
@@ -28,12 +45,16 @@ public class Runner {
             return key;
         }
 */
-        private static int addVibor(){
+        private static int addCheck(){
+            int i=0;
             Scanner sc=new Scanner(System.in);
             while(!sc.hasNextInt()){
+                System.out.println("Введите целое число");
                 sc.next();
             }
-            return sc.nextInt();
+            i=sc.nextInt();
+            sc.close();
+            return i;
 
         }
 

@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PriborKuhn extends Pribor {
-    private static int countK=0; //Количество приборов кухни
+    public static int countK=0; //Количество приборов кухни
     private final SimpleDateFormat sd=new SimpleDateFormat("dd.MM.yyyy");
     private Date dataTO; //Дата следующего технического обслуживания
     private int emkost; //Масса или обьем загружаемых продуктов(посуды)
@@ -18,6 +18,8 @@ public class PriborKuhn extends Pribor {
         } catch (ParseException s) {
             System.out.println("Не верный формат данных");
         }
+        countK++;
+        Test.count++;
     }
     public Date getDataTO() {
         return dataTO;

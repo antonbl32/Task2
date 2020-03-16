@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PriborVann extends Pribor{
-    private static int countV=0; //Количество приборов ванны
+    public static int countV=0; //Количество приборов ванны
     private final SimpleDateFormat sd=new SimpleDateFormat("dd.MM.yyyy");
     private Date dataTO; //Дата следующего технического обслуживания
     private Date dataZamFiltr; //Дата замены фильтра или сменного элемента
@@ -17,6 +17,8 @@ public class PriborVann extends Pribor{
 
         }catch (ParseException s){
             System.out.println("Не верный формат данных");
+        countV++;
+        Test.count++;
         }
     }
     public Date getDataTO() {
