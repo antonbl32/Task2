@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PriborVann extends Pribor{
+    private static int countV=0; //Количество приборов ванны
     private final SimpleDateFormat sd=new SimpleDateFormat("dd.MM.yyyy");
     private Date dataTO; //Дата следующего технического обслуживания
     private Date dataZamFiltr; //Дата замены фильтра или сменного элемента
@@ -21,16 +22,8 @@ public class PriborVann extends Pribor{
     public Date getDataTO() {
         return dataTO;
     }
-
-    public void setDataTO(Date dataTO) {
-        this.dataTO = dataTO;
-    }
-
     public Date getDataZamFiltr() {
         return dataZamFiltr;
     }
 
-    public void setDataZamFiltr(Date dataZamFiltr) {
-        this.dataZamFiltr = dataZamFiltr;
-    }
 }

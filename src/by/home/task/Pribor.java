@@ -14,32 +14,13 @@ public class Pribor {
     public String getNamePrib() {
         return namePrib;
     }
-
-    public void setNamePrib(String namePrib) {
-        this.namePrib = namePrib;
-    }
-
     public String getModelPrib() {
         return modelPrib;
     }
-
-    public void setModelPrib(String modelPrib) {
-        this.modelPrib = modelPrib;
-    }
-
     public int getPowerPrib() {
         return powerPrib;
     }
-
-    public void setPowerPrib(int powerPrib) {
-        this.powerPrib = powerPrib;
-    }
-
     public int getGroupNom() {
         return groupNom;
-    }
-
-    public void setGroupNom(int groupNom) {
-        this.groupNom = groupNom;
     }
 }

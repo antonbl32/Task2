@@ -1,6 +1,7 @@
 package by.home.task;
 
 public class PriborRoom extends Pribor {
+    private static int countR=0; //Количество приборов комнаты
     private int estPult; //Наличие дистанционного управления
     private int nadoInt; //Требуется наличие доступа в интернет
 
@@ -14,17 +15,9 @@ public class PriborRoom extends Pribor {
     public int getEstPult() {
         return estPult;
     }
-
-    public void setEstPult(int estPult) {
-        this.estPult = estPult;
-    }
-
     public int getNadoInt() {
         return nadoInt;
     }
 
-    public void setNadoInt(int nadoInt) {
-        this.nadoInt = nadoInt;
-    }
 }
 

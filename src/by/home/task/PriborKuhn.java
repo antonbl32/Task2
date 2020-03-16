@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PriborKuhn extends Pribor {
+    private static int countK=0; //Количество приборов кухни
     private final SimpleDateFormat sd=new SimpleDateFormat("dd.MM.yyyy");
     private Date dataTO; //Дата следующего технического обслуживания
     private int emkost; //Масса или обьем загружаемых продуктов(посуды)
@@ -21,17 +22,10 @@ public class PriborKuhn extends Pribor {
     public Date getDataTO() {
         return dataTO;
     }
-
-    public void setDataTO(Date dataTO) {
-        this.dataTO = dataTO;
-    }
-
     public int getEmkost() {
         return emkost;
     }
 
-    public void setEmkost(int emkost) {
-        this.emkost = emkost;
-    }
+
 }
 
