@@ -27,5 +27,12 @@ public class PriborVann extends Pribor{
     public Date getDataZamFiltr() {
         return dataZamFiltr;
     }
-
+    @Override
+    public String toString() {
+        return "\nПриборы ванны {"  +this.getNamePrib()+
+                " модель: "+ this.getModelPrib()+
+                ", дата след. ТО= " + sd.format(dataTO) +
+                ", дата замены фильтра=" + sd.format(dataZamFiltr) +
+                '}';
+    }
 }

@@ -27,7 +27,7 @@ public class Test {
             }
     }
     public static ArrayList<Object> selectGroup(int i){
-        ArrayList<Object> group=new ArrayList<Object>();
+        ArrayList<Object> group=new ArrayList<>();
 
         pribor.forEach((k,v) -> {
            Pribor m;

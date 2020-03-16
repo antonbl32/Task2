@@ -20,10 +20,10 @@ public class Runner {
                     System.out.println(selectGroup(1).toString());
                     break;
                 case 2:
-
+                    System.out.println(selectGroup(2).toString());
                     break;
                 case 3:
-
+                    System.out.println(selectGroup(3).toString());
                     break;
 
             }
@@ -46,7 +46,7 @@ public class Runner {
         }
 */
         private static int addCheck(){
-            int i=0;
+            int i;
             Scanner sc=new Scanner(System.in);
             while(!sc.hasNextInt()){
                 System.out.println("Введите целое число");

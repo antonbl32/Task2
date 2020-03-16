@@ -27,7 +27,14 @@ public class PriborKuhn extends Pribor {
     public int getEmkost() {
         return emkost;
     }
-
+    @Override
+    public String toString() {
+        return "\nПриборы кухни {"  +this.getNamePrib()+
+                " модель: "+ this.getModelPrib()+
+                ", дата след.ТО= " + sd.format(dataTO) +
+                ", емкость=" + emkost +
+                '}';
+    }
 
 }
 
