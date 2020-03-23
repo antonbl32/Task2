@@ -46,7 +46,7 @@ public class Test {
     }
     public static void onDevice(int a){
         for (int i = 1; i <=a ; i++) {
-            int key=(int)Math.random()*3+1;
+            int key=(int)(Math.random()*3+1);
             Pribor ob=(Pribor)pribor.get(key);
             if(!ob.getOnDev()){
                 ob.setOnDev(true);
