@@ -2,7 +2,7 @@ package by.home.task;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import static by.home.task.Test.selectGroup;
+import static by.home.task.Test.*;
 /*import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,15 +12,17 @@ import java.io.InputStreamReader;
 //Группа 3- кухня
 
 public class Runner {
-        public static void main(String[] args) throws ParseException {
-            try {Test.addPribor();}catch (ParseException s) {System.out.println("Не верные данные");}
+        public static void main(String[] args)  {
+            Test.addPribor();
             int key=addCheck();
             switch (key){
                 case 1:
                     System.out.println(selectGroup(1).toString());
                     break;
                 case 2:
-                    System.out.println(selectGroup(2).toString());
+                    //System.out.println(selectGroup(2).toString());
+                    onDevice(4);
+                    System.out.println("Общая можность подключенных устройств:"+sumPower());
                     break;
                 case 3:
                     System.out.println(selectGroup(3).toString());
@@ -28,23 +30,10 @@ public class Runner {
 
             }
 
+
         }
 
-/*
-        private static int addVibor() throws NumberFormatException {
-            BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-            int key=0;
-            try {
-                key=Integer.parseInt(br.readLine());
 
-            }catch (NumberFormatException | IOException s){
-                System.out.println("Введите целое число");
-                addVibor();
-            }
-            System.out.println();
-            return key;
-        }
-*/
         private static int addCheck(){
             int i;
             Scanner sc=new Scanner(System.in);

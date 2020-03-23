@@ -3,13 +3,15 @@ package by.home.task;
 public class Pribor {
    private String namePrib; //Название прибора
    private String modelPrib; //Модель прибора
-   private int powerPrib; //Мощность прибора
+   private Double powerPrib; //Мощность прибора
    private int groupNom; // Номер группы прибора
-    public Pribor(String namePrib, String modelPrib,int powerPrib, int groupNom){
+   private boolean onDev;//Статус включен в сеть или нет
+    public Pribor(String namePrib, String modelPrib,Double powerPrib, int groupNom){
         this.namePrib=namePrib;
         this.modelPrib=modelPrib;
         this.powerPrib=powerPrib;
         this.groupNom=groupNom;
+        this.onDev=false;
     }
     public String getNamePrib() {
         return namePrib;
@@ -17,10 +19,16 @@ public class Pribor {
     public String getModelPrib() {
         return modelPrib;
     }
-    public int getPowerPrib() {
+    public Double getPowerPrib() {
         return powerPrib;
     }
     public int getGroupNom() {
         return groupNom;
+    }
+    public boolean getOnDev() {
+        return onDev;
+    }
+    public void setOnDev(boolean onDev) {
+        this.onDev = onDev;
     }
 }

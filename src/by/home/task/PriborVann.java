@@ -9,7 +9,7 @@ public class PriborVann extends Pribor{
     private final SimpleDateFormat sd=new SimpleDateFormat("dd.MM.yyyy");
     private Date dataTO; //Дата следующего технического обслуживания
     private Date dataZamFiltr; //Дата замены фильтра или сменного элемента
-    public PriborVann(String namePrib, String modelPrib, int powerPrib, int groupNom, String dataTO,String zamFiltr) throws ParseException {
+    public PriborVann(String namePrib, String modelPrib, Double powerPrib, int groupNom, String dataTO,String zamFiltr)  {
         super(namePrib, modelPrib, powerPrib, groupNom);
         try {
             this.dataTO = sd.parse(dataTO);

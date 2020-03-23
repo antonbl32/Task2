@@ -10,8 +10,8 @@ public class PriborKuhn extends Pribor {
     private Date dataTO; //Дата следующего технического обслуживания
     private int emkost; //Масса или обьем загружаемых продуктов(посуды)
 
-    public PriborKuhn(String namePrib, String modelPrib, int powerPrib, int groupNom, String dataTO,int emkost) throws ParseException {
-        super(namePrib, modelPrib, powerPrib, groupNom);
+    public PriborKuhn(String namePrib, String modelPrib, Double powerPrib, int groupNom, String dataTO, int emkost) {
+        super(namePrib, modelPrib,powerPrib, groupNom);
         try {
             this.dataTO = sd.parse(dataTO);
             this.emkost = emkost;
@@ -31,8 +31,9 @@ public class PriborKuhn extends Pribor {
     public String toString() {
         return "\nПриборы кухни {"  +this.getNamePrib()+
                 " модель: "+ this.getModelPrib()+
-                ", дата след.ТО= " + sd.format(dataTO) +
-                ", емкость=" + emkost +
+                ", дата след.ТО : " + sd.format(dataTO) +"г."+
+                ", емкость :" + emkost +
+                " ,мощность: "+this.getPowerPrib()+
                 '}';
     }
 
